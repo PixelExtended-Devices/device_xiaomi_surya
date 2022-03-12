@@ -21,18 +21,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-# Inherit some common Raven stuff.
+# Inherit some common PEX stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 PRODUCT_SOONG_NAMESPACES += \
 $(LOCAL_PATH) \
 hardware/qcom-caf/sm8150
-
+TARGET_BOOT_ANIMATION_RES := 1080
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sm6150
 
-RAVEN_BUILD_TYPE := OFFICIAL
-RAVEN_MAINTAINER := Tushar
 TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := aosp_surya
